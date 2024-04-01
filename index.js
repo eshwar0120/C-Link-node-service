@@ -13,7 +13,7 @@ app.get("/api/data", async (req, res) => {
   try {
     // Make API call to another API
     const response = await axios.get(
-      "https://mobile311.sfgov.org/open311/v2/requests.json"
+      "https://earthquake.usgs.gov/fdsnws/event/1/query?minlongitude=-125&maxlatitude=38&maxlongitude=-114&format=geojson&minlatitude=34"
     );
     // Send the data from the response's data property as the response
     res.status(200).json(response.data);
